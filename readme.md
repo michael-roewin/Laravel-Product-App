@@ -31,6 +31,9 @@ You will need to run: <code>php artisan passport:keys</code>
 
   ## Import DB
 Import the product-app.db file that is located inside the project directory to mysql.
+<b>User Credentials</b>
+username: admin
+password: admin
 
 ## Create  .env file
 copy the .env.example file and rename it as .env files and edit the configuration.
