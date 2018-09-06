@@ -16,9 +16,9 @@ for the server requirements.
 Clone the project using:
 <code>git clone https://github.com/michael-roewin/Laravel-Product-App.git</code>
 
-If you are using linux, open the terminal then go to the project directory and run this commands
-<code>chmod -R 777 bootstrap/cache/ 
-chmod -R 777 storage
+If you are using linux, open the terminal then go to the project directory and run this commands<br>
+<code>chmod -R 777 bootstrap/cache/ <br>
+&nbsp;chmod -R 777 storage
 </code>
 
 You need to install composer for the libraries needed for the app.
@@ -29,14 +29,15 @@ Once composer is installed run: <code>composer update</code> on the project dire
 After running <code>composer update</code>
 You will need to run: <code>php artisan passport:keys</code>
 
-  ## Import DB
-Import the product-app.db file that is located inside the project directory to mysql.
-<b>User Credentials</b>
-username: admin
+
+## Import DB
+Import the product-app.db file that is located inside the project directory to mysql.<br><br>
+<b>User Credentials</b><br>
+username: admin<br>
 password: admin
 
 ## Create  .env file
-copy the .env.example file and rename it as .env files and edit the configuration.
+copy the .env.example file and rename it as .env files and Aedit the configuration.
 
 ## Notes
 The view files of this laravel product app app came from the angular build in https://github.com/michael-roewin/Angular-Product-App.
