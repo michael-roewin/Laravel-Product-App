@@ -17,9 +17,9 @@ Clone the project using:
 <code>git clone https://github.com/michael-roewin/Laravel-Product-App.git</code>
 
 If you are using linux, open the terminal then go to the project directory and run this commands<br>
-<code>chmod -R 777 bootstrap/cache/ <br>
-&nbsp;chmod -R 777 storage
-</code>
+<code>chmod -R 777 bootstrap/cache</code> <br>
+<code>chmod -R 777 storage</code>
+
 
 You need to install composer for the libraries needed for the app.
 https://getcomposer.org/
