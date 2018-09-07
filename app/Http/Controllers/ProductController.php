@@ -28,17 +28,18 @@ class ProductController extends Controller
         $productRequest = $request->input();
 
         $perPage = !empty($productRequest['perPage']) ? $request['perPage'] : false;
-        $orderBy = !empty($productRequest['orderBy']) ? $productRequest['orderBy'] : 'name';
+        $orderBy = !empty($productRequest['orderBy']) ? $productRequest['orderBy'] : 'products.name';
         $order = !empty($productRequest['order']) ? $productRequest['order'] : 'ASC';
         $page =  !empty($productRequest['page']) ? $productRequest['page'] : false;
 
-        $products = Product::select('*');
+        $products = Product::select('products.*', 'categories.id as category_id', 'categories.categorypath')
+                           ->leftjoin('categories', 'categories.id', '=', 'products.category_id');
 
         if(isset($productRequest['q'])) {
 
             $binding = '%'.$productRequest['q'].'%';
 
-            $products = $products->where('name', 'LIKE', '%'.$binding.'%')
+            $products = $products->where('products.name', 'LIKE', '%'.$binding.'%')
                            ->orWhere('email', 'LIKE', '%'.$productRequest['q'].'%');
         }
 
